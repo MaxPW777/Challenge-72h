@@ -1,0 +1,21 @@
+@import "../global.css";
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+div{
+    width: 48%;
+}
+
+main > h2{
+    margin: 0 auto;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
