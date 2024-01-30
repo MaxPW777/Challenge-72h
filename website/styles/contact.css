@@ -12,12 +12,17 @@ input, textarea {
     width: 30rem;
     height: 5rem;
     border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.704);
     font-size: x-large;
     padding: 0.5rem;
+    color:rgb(123, 123, 123)
 }
 textarea:focus, input:focus{
     outline: none;
+}
+
+.text-container {
+    margin-bottom: 20px;
 }
 
 #content{
