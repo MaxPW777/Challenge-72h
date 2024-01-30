@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>contact page</title>
-        <link rel="stylesheet" href="../styles/contact.css" />
-    </head>
-    <body>
-        <header>
-            <h1>PORTFOLIO DE FABRICE</h1>
-            <h1>CONTACT</h1>
-        </header>
-        <main>
-                <input type="text" name="nom" id="nom" placeholder="Name"></textarea>
-                <input type="text" name="email" id="email" placeholder="Email address"></textarea>
-                <input type="text" name="message" id="message" placeholder="Your Message"></textarea>
-                <input onclick="alert('Votre message comporte trop de mots ! Pas envie de le lire !')" type="submit" value="Submit" />
-        </main>
-        <footer>
-            <h3><a href="about.html">About Me</a></h3>
-            <h3><a href="welcome.html">Welcome Page</a></h3>
-            <h3><a href="index.html">Homepage</a></h3>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact page</title>
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem; /* Espacement vertical entre les éléments */
+        }
+
+        input, textarea {
+            width: 30rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.704);
+            font-size: x-large;
+            padding: 0.5rem;
+            color: rgb(123, 123, 123);
+        }
+
+        textarea:focus, input:focus {
+            outline: none;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #content {
+            height: 15rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PORTFOLIO DE FABRICE</h1>
+        <h1>CONTACT</h1>
+    </header>
+
+    <main>
+        <h2>Contact me</h2>
+
+        <form id="passwordForm">
+            <div class="text-container">
+                <label for="password1">User:</label>
+                <input type="text" id="password1" required>
+            </div>
+
+            <div class="text-container">
+                <label for="password2">Email Adress:</label>
+                <input type="text" id="password2" required>
+            </div>
+
+            <div class="text-container">
+                <label for="password3">Your Message:</label>
+                <input type="text" id="password3" required>
+            </div>
+
+            <div class="text-container">
+                <input onclick="checkPasswords()" type="button" value="Submit" />
+            </div>
+        </form>
+
+    </main>
+    <footer>
+        <h3><a href="about.html">About Me</a></h3>
+        <h3><a href="welcome.html">Welcome Page</a></h3>
+        <h3><a href="index.html">Homepage</a></h3>
+    </footer>
+    <script>
+        function checkPasswords() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+            var password3 = document.getElementById("password3").value;
+
+            // Remplacez "cv", "cc", et "ct" par les mots de passe que vous souhaitez définir.
+            if (password1 === "xX_Jean_Gaming&Bricolage_Xx" && password2 === "JD Jr" && password3 === "Live Laugh Love Breathe") {
+                alert("Mot de passe correct ! Accès autorisé.");
+            } else {
+                alert("Mot de passe incorrect. Veuillez réessayer.");
+            }
+        }
+    </script>
+</body>
 </html>
