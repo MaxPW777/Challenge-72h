@@ -22,9 +22,9 @@ textarea:focus, input:focus{
 }
 
 .text-container {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #content{
-    height: 15rem;
+    height: 1rem;
 }
